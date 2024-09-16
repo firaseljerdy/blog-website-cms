@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Header from "@/app/Components/Header";
 import { Post } from "@/app/utils/interface";
 import { client } from "@/sanity/lib/client";
@@ -10,6 +11,9 @@ import React from "react";
 interface Params {
   params: {
     slug: string;
+  };
+  searchParams: {
+    [key: string]: string | string[] | undefined;
   };
 }
 
