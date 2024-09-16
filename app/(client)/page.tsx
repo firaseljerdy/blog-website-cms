@@ -30,7 +30,7 @@ export default async function Home() {
   const posts: Post[] = await getPosts();
   return (
     <div className="font-geistMono">
-      <Header title="Articles" />
+      <Header title="Articles" tags />
       <div>
         {posts?.length > 0 &&
           posts?.map((post) => <PostComponent key={post?._id} post={post} />)}

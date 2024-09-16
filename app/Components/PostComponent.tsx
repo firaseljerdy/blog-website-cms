@@ -19,9 +19,9 @@ const PostComponent = ({ post }: Props) => {
       </Link>
 
       <div>
-        {post?.tags.map((tag) => (
+        {post?.tags.map((tag, index) => (
           <span
-            key={tag?._id}
+            key={tag?._id ?? index} // Fallback to index if _id is missing
             className="mr-2 p-1 rounded-sm text-sm lowercase dark:bg-gray-950 border dark:border-gray-900"
           >
             {tag?.name}
