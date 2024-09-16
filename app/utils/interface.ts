@@ -1,9 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { PortableTextBlock } from "@sanity/types";
+
 export interface Post {
   title: string;
   slug: { current: string };
   publishedAt: string;
   excerpt: string;
-  body: any;
+  body: PortableTextBlock[]; // Updated from 'any' to 'PortableTextBlock[]'
   tags: Array<Tag>;
   _id: string;
 }
